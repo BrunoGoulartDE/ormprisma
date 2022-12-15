@@ -13,21 +13,27 @@ async function main() {
 
       email: 'bruno.goulart1414@gmail.com',
 
-      posts: {
+      // posts: {
 
-        create: { title: 'criadoo' },
+      //   create: { title: 'criadoo' },
 
-      },
+      // },
 
-      profile: {
+      // profile: {
 
-        create: { bio: 'bio criado' },
+      //   create: { bio: 'bio criado' },
 
-      },
+      // },
 
     },
 
   })
+
+  const numeroUser = await prisma.user.count({ 
+      where: { name: 'bruno' }
+    });
+
+  console.log('Numeros de usuários', numeroUser)
 
 
   const allUsers = await prisma.user.findMany({
