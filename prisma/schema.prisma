@@ -1,4 +1,3 @@
-
 generator client{
   provider = "prisma-client-js"
 }
@@ -34,4 +33,5 @@ model User {
   posts   Post[]
   profile Profile?
 }
+
 
