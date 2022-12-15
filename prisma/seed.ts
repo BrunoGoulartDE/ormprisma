@@ -6,7 +6,7 @@ async function main() {
 
     const bruno = await prisma.user.upsert({
         where: { id: 2 },
-        update: {},
+        update: {name:"Joao"},
         create: {
             email: 'bruno.goulart@viacometa.com',
             name: 'Bruno Goulart'
@@ -16,6 +16,7 @@ async function main() {
 
     console.log({bruno});
 }
+
 main()
     .then(async () => {
         await prisma.$disconnect()
