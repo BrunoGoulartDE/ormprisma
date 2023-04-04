@@ -11,7 +11,7 @@ async function main() {
 
       name: 'bruno',
 
-      email: 'bruno.goulart1414@gmail.com',
+      email: 'bruno@gmail.com',
 
       // posts: {
 
